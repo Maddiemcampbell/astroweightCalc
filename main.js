@@ -1,4 +1,3 @@
-// Write your JavaScript code here!
 var planets = [
     ['Pluto', 0.06],
     ['Neptune', 1.148],
@@ -25,26 +24,37 @@ var planets = [
 
   var weight = document.getElementById("user-weight").value;
 
-
-  function calculateWeight(weight, arrayGravity) {
-    for (var i = 0; i < planets.length; i++){
-        var arrayGravity = planets[i][1];
-        var output = weight * arrayGravity;
-        console.log(output)
-      }
+function calculateWeight(weight, planetName) {
+    // 2. Write the code to return the correct weight
+    var planetName = document.getElementById("planets").selectedIndex;
+    var newGravity = planets[planetName][1];
+      
+    return weight * newGravity;
+  }
+  
+  //onclick function for #calculate-button
+  function handleClickEvent() {
+    // 3. Create a variable called userWeight and assign the value of the user's weight.
+    var weight = parseFloat(document.getElementById("user-weight").value);
+    // 4. Create a variable called planetName and assign the name of the selected planet from the drop down.
+    var planetName = document.getElementById("planets").value;
+    // 5. Create a variable called result and assign the value of the new calculated weight.
+    var result = calculateWeight(weight, planetName);
+    // 6. Write code to display the message shown in the screenshot.
+    document.getElementById("output").innerHTML = "If you were on " + planetName + ',' + ' you would weigh ' + result + 'lbs!';
+   
   }
 
-  calculateWeight()
+
   
-  function handleClickEvent(e) {
-    var planetName = document.getElementById("planets").value;
-    var userWeight = document.getElementById("user-weight").value;
-    var result = calculateWeight(userWeight, planetName);
-//     console.log(result)
- }
-  
-  // 7. Set the #calculate-button element's onclick method to use the handleClickEvent function.
-  
+
+
+
+
+
+
+
+
   // Bonus Challenges
   // 8. Reverse the drop down order so that the sun is first.
   // 9. Make it look nice using bootstrap (http://getbootstrap.com/getting-started/)

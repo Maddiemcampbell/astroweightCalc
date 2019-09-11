@@ -1,0 +1,22 @@
+.userContainer{
+    background: rgb(219,169,255);
+    background: radial-gradient(circle, rgba(219,169,255,1) 0%, rgba(74,44,255,1) 100%);
+    border: 10px solid white;
+    padding: 35px;
+}
+
+input{
+    appearance: none;
+    background-color: none;
+    border: 1px solid darkcyan;
+    line-height: 0;
+    font-size: 17px;
+    width: 20%;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 60px;
+    color: red;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative
+}
