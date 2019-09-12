@@ -14,7 +14,7 @@ var planets = [
 
 var select = document.getElementById('planets');
  
-//function to populate dropdown menu
+// function to populate dropdown menu
  planets.forEach(function(element){
   // initialize a variable that creates option element
    var newOption = document.createElement("option");
@@ -28,7 +28,7 @@ var select = document.getElementById('planets');
 
 var weight = document.getElementById("user-weight").value;
 
-// runs the weight * selected planet's gravity
+// runs the input weight * selected planet's gravity
 function calculateWeight(weight, planetName) {
     var planetName = document.getElementById("planets").selectedIndex;
     var newGravity = planets[planetName][1];
@@ -38,11 +38,11 @@ function calculateWeight(weight, planetName) {
 // handleClickEvent runs onclick of #calculate-button
   function handleClickEvent() {
     // Create a variable called userWeight and assign the value of the user's weight.
-    var Userweight = parseFloat(document.getElementById("user-weight").value);
+    var userweight = parseFloat(document.getElementById("user-weight").value);
     // Create a variable called planetName and assign the name of the selected planet from the drop down.
     var planetName = document.getElementById("planets").value;
     // Create a variable called result and assign the value of the new calculated weight.
-    var result = calculateWeight(Userweight, planetName);
+    var result = calculateWeight(userweight, planetName);
     // Write code to display the message shown in the screenshot.
-    document.getElementById("output").innerHTML = "If you were on " + planetName + ',' + ' you would weigh ' + result + 'lbs!';
+    document.getElementById("output").innerHTML = 'If you were on ' + planetName + ',' + ' you would weigh ' + result + 'lbs!';
   }
